@@ -1,0 +1,21 @@
+<div class="column align-center">
+  <div class="title">
+    <h2>Random Facts</h2>
+  </div>
+  <div class="row align-center fact">
+    <ng-container *ngIf="isLoaded; else loading">{{fact?.fact}}</ng-container>
+    <ng-template #loading>Loading...</ng-template>
+  </div>
+  <div>
+    <button (click)="getFact()" class="yellow-button">Get another one</button>
+  </div>
+  <div>
+    <button routerLink="" class="back-button">Back</button>
+  </div>
+  <div>
+    <img
+      class="fact-img"
+      [src]="'undraw_playful_cat_re_ac9g.svg' | assetsImages"
+    />
+  </div>
+</div>

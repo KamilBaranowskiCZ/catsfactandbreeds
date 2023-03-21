@@ -1,0 +1,40 @@
+<div class="column align-center">
+  <div class="title">
+    <h2>Breeds</h2>
+  </div>
+  <div class="row align-center">
+    <div class="left-arrow">
+      <button (click)="previousCatNumber()" class="arrow-button">
+        <img class="arrow-img" [src]="'leftarrow.svg' | assetsImages" />
+      </button>
+    </div>
+    <img class="breed-img" [src]="'undraw_cat_epte.svg' | assetsImages" />
+    <div class="right-arrow">
+      <button (click)="nextCatNumber()" class="arrow-button">
+        <img class="arrow-img" [src]="'rightarrow.svg' | assetsImages" />
+      </button>
+    </div>
+  </div>
+  <div class="row justify-center cats-row">
+    <!-- <ng-container *ngIf="isLoaded; else loading">{{fact?.fact}}</ng-container>
+      <ng-template #loading>Loading...</ng-template> -->
+    <div class="empty-div"></div>
+    <div class="cats-category">
+      <p>Breed</p>
+      <p>Country</p>
+      <p>Origin</p>
+      <p>Coat</p>
+      <p>Pattern</p>
+    </div>
+    <div class="cats-characteristics">
+      <p>{{ breed?.breed }}</p>
+      <p>{{ breed?.country }}</p>
+      <p>{{ breed?.origin }}</p>
+      <p>{{ breed?.coat }}</p>
+      <p>{{ breed?.pattern }}</p>
+    </div>
+  </div>
+  <div class="row justify-center">
+    <button class="back-button" type="button" routerLink="">Back</button>
+  </div>
+</div>

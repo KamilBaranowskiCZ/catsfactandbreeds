@@ -1,0 +1,42 @@
+.breed-img{
+    height: 32vh;
+    margin: 32px 0;
+}
+
+
+.column {
+    height: 100%;
+  }
+
+.cats-row{
+    width: 880px;
+}
+
+
+.empty-div{
+    flex: 2;
+}
+
+.cats-category{
+    opacity: 0.25;
+    flex: 1;
+    font-weight: 600;
+}
+
+.cats-characteristics{
+    flex: 3;
+    font-weight: 600;
+}
+
+.left-arrow{
+    margin-right: 240px;
+}
+
+.right-arrow{
+    margin-left: 240px;
+}
+
+.arrow-button{
+    border: 0;
+    background: transparent;
+}
