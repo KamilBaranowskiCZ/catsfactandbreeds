@@ -10,10 +10,8 @@ import { BreedsResponseService } from '../services/breeds-response.service';
 })
 export class BreedsComponent implements OnInit {
   breed?: Breed;
-  breedResponse?: BreedResponse;
-  breedList = [];
+  breedList: Breed[] = [];
   catNumber = 0;
-
 
   constructor(private breedsResponseService: BreedsResponseService) {}
 
@@ -21,33 +19,29 @@ export class BreedsComponent implements OnInit {
     this.getBreedsResponse();
   }
 
-
-
   getBreedsResponse() {
-    this.breedsResponseService.getBreedsResponse().subscribe(breedResponse => {
-      this.breedResponse = breedResponse;
-      console.log(this.breedResponse.data)
-      this.breedResponse.data.forEach(x => this.breedList?.push(x));
-      this.breed = this.breedList[this.catNumber]
-    })
+    this.breedsResponseService
+      .getBreedsResponse()
+      .subscribe((breedResponse) => {
+        this.breedList = breedResponse.data;
+        this.breed = this.breedList[this.catNumber];
+      });
   }
 
-  nextCatNumber(){
-    if(this.catNumber!= 24){
-      this.catNumber += 1
+  nextCatNumber() {
+    if (this.catNumber != this.breedList.length - 1) {
+      this.catNumber += 1;
+    } else {
+      this.catNumber = 0;
     }
-    else{
-      this.catNumber = 0
-    }
-    this.getBreedsResponse();
+    this.breed = this.breedList[this.catNumber];
   }
-  previousCatNumber(){
-    if(this.catNumber!= 0){
-      this.catNumber -= 1
+  previousCatNumber() {
+    if (this.catNumber != 0) {
+      this.catNumber -= 1;
+    } else {
+      this.catNumber = this.breedList.length - 1;
     }
-    else{
-      this.catNumber = 24
-    }
-    this.getBreedsResponse();
+    this.breed = this.breedList[this.catNumber];
   }
 }

@@ -16,8 +16,6 @@
     </div>
   </div>
   <div class="row justify-center cats-row">
-    <!-- <ng-container *ngIf="isLoaded; else loading">{{fact?.fact}}</ng-container>
-      <ng-template #loading>Loading...</ng-template> -->
     <div class="empty-div"></div>
     <div class="cats-category">
       <p>Breed</p>
@@ -27,11 +25,11 @@
       <p>Pattern</p>
     </div>
     <div class="cats-characteristics">
-      <p>{{ breed?.breed }}</p>
-      <p>{{ breed?.country }}</p>
-      <p>{{ breed?.origin }}</p>
-      <p>{{ breed?.coat }}</p>
-      <p>{{ breed?.pattern }}</p>
+      <p>{{ breed?.breed | emptyField }}</p>
+      <p>{{ breed?.country | emptyField }}</p>
+      <p>{{ breed?.origin | emptyField }}</p>
+      <p>{{ breed?.coat | emptyField }}</p>
+      <p>{{ breed?.pattern | emptyField }}</p>
     </div>
   </div>
   <div class="row justify-center">
