@@ -7,7 +7,7 @@
 ## 2. What I learned in this project:
 Using rest api(observable)
 Writing my own Angular Pipes
-Creating Anuglar Components, Services and Routing
+Creating Angular Components, Services and Routing
 
 
 ![Welcome Page](./images/welcome.png)
