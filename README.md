@@ -11,3 +11,7 @@ Creating Anuglar Components, Services and Routing
 
 
 ![Welcome Page](./images/welcome.png)
+
+![Facts Page](./images/facts.png)
+
+![Breeds Page](./images/breeds.png)
