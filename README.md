@@ -16,4 +16,3 @@
 ![Facts Page](./images/facts.png)
 
 ![Breeds Page](./images/breeds.png)
-
