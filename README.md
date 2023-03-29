@@ -12,3 +12,8 @@
 ## 3. Screens
 
 ![Welcome Page](./images/welcome.png)
+
+![Facts Page](./images/facts.png)
+
+![Breeds Page](./images/breeds.png)
+
